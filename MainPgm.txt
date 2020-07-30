@@ -1,0 +1,51 @@
+import java.util.*;
+public class MainPgm {
+	double a;
+	double b;
+	double c;
+	Employee emp;
+	static ArrayList<Employee> arr=new ArrayList<Employee>();
+	void printDet()
+	{
+		for(Employee emp:arr)
+		System.out.println(emp);
+		System.out.println();
+	}
+	void calculateHRA()
+		{
+		   Iterator<Employee> ir=arr.iterator();
+		   
+		   while(ir.hasNext())
+		   {
+			   Employee em=ir.next();
+			   
+			   
+			if(em.empdes=="manager")
+			{
+				a=((em.hra=((em.basic)*(10/100))));
+				System.out.println(a);
+			}
+			if(em.empdes=="officer")
+			{
+				b=((em.hra=((em.basic)*(12/100))));
+				System.out.println(b);
+			}
+			if(em.empdes=="clerk")
+			{
+				c=((em.hra=((em.basic)*(5/100))));
+				System.out.println(c);
+				
+			}
+		   }
+		}
+	public static void main(String args[])
+	{
+		arr.add(new Employee(1,"koti","manager",35000.46,0.0));
+		arr.add(new Employee(2,"Nandu","officer",25000.46,0.0));
+		arr.add(new Employee(1,"durga","clerk",15000.46,0.0));
+		MainPgm e=new MainPgm();
+		e.calculateHRA();
+		e.printDet();
+	}
+}
+		
