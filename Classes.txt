@@ -1,0 +1,13 @@
+//abstract class
+Abstract THBS
+{
+}
+//concrete classes
+class Men
+{
+
+}
+class Women
+{
+}
+
